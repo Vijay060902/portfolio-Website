@@ -1,0 +1,195 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijay Mani's Portfolio</title>
+    
+    <!-- Load static files -->
+    <!-- Link to your CSS file using static tag -->
+    <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Vijay's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 60px 20px; background: #f7f9fc;">
+        <div style="max-width: 1200px; margin: auto; display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+          <!-- Profile Picture -->
+          <div
+            style="
+              flex: 1;
+              max-width: 300px;
+              border-radius: 20px;
+              overflow: hidden;
+              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+              transform: scale(1);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.05)';"
+            onmouseout="this.style.transform='scale(1)';"
+          >
+            <img
+              src="{% static 'myapp/images/mypicc.jpg' %}"
+              alt="Vijay Mani"
+              style="width: 100%; height: auto; display: block;"
+            />
+          </div>
+      
+          <!-- About Me Content -->
+          <div style="flex: 2; text-align: left;">
+            <h1 style="font-size: 2.5rem; color: #333; font-family: 'Poppins', sans-serif; margin-bottom: 10px;">
+              Vijay Mani
+            </h1>
+            <h2 style="font-size: 1.2rem; color: #555; font-family: 'Roboto', sans-serif; margin-bottom: 20px;">
+              Full Stack Developer | Crafting Digital Experiences
+            </h2>
+            <p
+              style="
+                font-size: 1rem;
+                line-height: 1.8;
+                color: #444;
+                margin-bottom: 20px;
+                font-family: 'Roboto', sans-serif;
+              "
+            >
+              Hi, I'm Vijay Mani! I specialize in building dynamic and user-friendly web applications using
+              <b>React.js</b>, <b>Python</b>, and <b>SQL</b>. I enjoy solving complex problems with innovative solutions and strive to deliver impactful digital experiences that seamlessly combine design and functionality.
+            </p>
+            <a
+              href="{% static 'myapp/files/Vijay_Resume.pdf' %}"
+              download
+              style="
+                display: inline-block;
+                padding: 15px 30px;
+                background: linear-gradient(145deg, #00b4db, #0083b0);
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: bold;
+                font-family: 'Poppins', sans-serif;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+              "
+              onmouseover="this.style.boxShadow='0 12px 30px rgba(0, 0, 0, 0.3)'; this.style.transform='translateY(-3px)';"
+              onmouseout="this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'; this.style.transform='translateY(0)';"
+            >
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </section>
+        
+
+    <!-- Skills Section -->
+    <!-- Skills Section -->
+<section id="skills">
+    <div class="skills-container">
+        <h2 class="skillsh">Skills</h2>
+        <div class="skills-grid">
+            <!-- Frontend Skills -->
+            <div class="skill-card">
+                <h3>Frontend Development</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
+                    <li>Bootstrap</li>
+                    <li>WordPress</li>
+                </ul>
+            </div>
+            <!-- Backend Skills -->
+            <div class="skill-card">
+                <h3>Backend Development</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>SQL</li>
+                    <li>REST APIs</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <ul class="list">
+          <!-- Food Ordering Website -->
+          <li class="item">
+            <h3 class="ph">Food Ordering Website</h3>
+            <p>A web app where users can add, remove, and view food items in a cart, built using <strong>HTML, CSS, JavaScript, React.js</strong>.</p>
+            <a href="https://github.com/Vijay060902" target="_blank" class="button">View Code</a>
+          </li>
+      
+          <!-- Portfolio Website -->
+          <li class="item">
+            <h3 class="ph">Portfolio Website</h3>
+            <p>A personal portfolio to showcase my skills, projects, and experience, built using <strong>HTML, CSS, JavaScript, Django</strong>.</p>
+            <a href="https://github.com/Vijay060902" target="_blank" class="button">View Website</a>
+          </li>
+      
+          <!-- Dictionary App -->
+          <li class="item">
+            <h3 class="ph">Dictionary App</h3>
+            <p>A dictionary app with search functionality and a text-to-speech feature, built with <strong>React.js</strong>.</p>
+            <a href="https://github.com/Vijay060902" target="_blank" class="button">View Code</a>
+          </li>
+      
+          <!-- Task Manager App -->
+          <li class="item">
+            <h3 class="ph">Task Manager App</h3>
+            <p>An app for managing tasks using REST APIs, allowing adding, deleting, and modifying tasks. Built using <strong>React.js</strong>.</p>
+            <a href="https://github.com/Vijay060902" target="_blank" class="button">View Code</a>
+          </li>
+      
+          <!-- Smart Glove Box -->
+          <li class="item">
+            <h3 class="ph">Smart Glove Box</h3>
+            <p>A smart glove box project with cloud connectivity and security features, developed during an internship at <strong>Sundaram Auto Components</strong>.</p>
+            <a href="https://github.com/Vijay060902" target="_blank" class="button">View Code</a>
+          </li>
+        </ul>
+      </section>
+      
+
+   <!-- Contact Section -->
+   <section id="contact" class="contact-section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me through any of the following platforms:</p>
+        
+        <div class="social-links">
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:vijayvicky0609@gmail.com" class="contact-link">vijayvicky0609@gmail.com</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/vijay-mani-862922282/" target="_blank" class="contact-link">View Profile</a></p>
+            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Vijay060902" target="_blank" class="contact-link">View Profile</a></p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Vijay Mani. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
